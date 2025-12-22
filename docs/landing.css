@@ -152,14 +152,21 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 120px 24px 80px;
+    justify-content: center;
+    padding: 100px 24px 80px;
     position: relative;
     overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 60px;
 }
 
 .hero-bg {
-    position: absolute;
-    inset: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: var(--gradient-hero);
     z-index: -2;
 }
@@ -167,18 +174,18 @@ body {
 .hero-bg::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 60%);
     z-index: -1;
 }
 
 .hero-content {
     flex: 1;
-    max-width: 600px;
+    max-width: 580px;
 }
 
 .hero-badge {
